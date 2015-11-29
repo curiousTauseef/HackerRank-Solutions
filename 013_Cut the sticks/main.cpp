@@ -19,76 +19,43 @@ int main()
 
 	cout << sticksLeft << endl;
 
-	smallestStick = arr[0];
-
-	while (arr.size() > 1)
-	{
-		for (int arr_i = 0; arr_i < n; arr_i++)
-		{
-			if (arr[arr_i] < smallestStick)
-			{
-				smallestStick = arr[arr_i];
-			}
-		}
-
-		for (int arr_i = 0; arr_i < arr.size(); arr_i++)
-		{
-			if (arr[arr_i] >= smallestStick)
-			{
-				arr[arr_i]-=smallestStick;
-			}
-		}
-
-		for (int arr_i = 0; arr_i < arr.size(); arr_i++)
-		{
-			if (arr[arr_i] <= 0)
-			{
-				arr.erase(arr.begin() + arr_i);
-			}
-		}
-
-		cout << arr.size() << endl;
-	}
-	/*
 	while (sticksLeft > 1)
 	{
-		//Calculate smallest stick
-		for (int arr_i = 0; arr_i < n - 1; arr_i++)
+		sticksLeft = 0;
+
+		//Take the first non zero element as smallest
+		for (int arr_i = 0; arr_i < n; arr_i++)
 		{
-			if (arr[arr_i + 1] > arr[arr_i])
+			if (arr[arr_i]>0)
 			{
 				smallestStick = arr[arr_i];
-			}
-			else
-			{
-				smallestStick = arr[arr_i + 1];
+				break;
 			}
 		}
 
+		//Calculate the smallest
+		for (int arr_i = 0; arr_i < n; arr_i++)
+		{
+			if (arr[arr_i] < smallestStick && arr[arr_i]>0)
+			{
+				smallestStick = arr[arr_i];
+			}
+		}
+
+		//Count the sticks left
 		for (int arr_i = 0; arr_i < n; arr_i++)
 		{
 			arr[arr_i] -= smallestStick;
-			if (arr[arr_i] == 0)
+
+			if (arr[arr_i] > 0)
 			{
-				sticksLeft--;
+				sticksLeft++;
 			}
 		}
 
-		//Calculate number of sticks left
-		if (sticksLeft > 1)
-		{
-			for (int arr_i = 0; arr_i < n; arr_i++)
-			{
-				if (arr[arr_i] <= smallestStick)
-				{
-					sticksLeft--;
-				}
-			}
-		}
-	
-		cout << sticksLeft << endl;
+		if(sticksLeft > 0)
+			cout << sticksLeft << endl;
 	}
-	*/
 
 	system("PAUSE");
 	return 0;
