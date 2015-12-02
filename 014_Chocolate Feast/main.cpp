@@ -2,6 +2,8 @@
 
 using namespace std;
 
+int NumberOfChocolates(int, int, int);
+
 int main()
 {
 	int t;
@@ -12,6 +14,8 @@ int main()
 		int c;
 		int m;
 		cin >> n >> c >> m;
+
+		NumberOfChocolates(n,c,m);
 	}
 	return 0;
 }
