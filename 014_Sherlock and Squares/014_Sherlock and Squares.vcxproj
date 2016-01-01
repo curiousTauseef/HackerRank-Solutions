@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DA0F4DBB-4023-4E1A-AF9F-266741CB0A25}</ProjectGuid>
+    <ProjectGuid>{7E9FB8B5-C7EE-47B2-821F-8D05DE8DC211}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My014_ChocolateFeast</RootNamespace>
+    <RootNamespace>My014_SherlockandSquares</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
